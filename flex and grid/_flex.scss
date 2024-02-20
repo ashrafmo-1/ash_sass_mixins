@@ -1,0 +1,17 @@
+
+
+@mixin flex-content($position) {
+    display: flex;
+    justify-content: $position;
+    align-items: center;
+}
+
+@mixin width-center($widht) {
+    width: $widht;
+    margin: auto !important;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
