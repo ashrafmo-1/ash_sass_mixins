@@ -1,0 +1,29 @@
+{
+  "project_name": "mixins",
+  "description": "Sass Mixins To Make The CSS Easier",
+  "author": "ashraf mohaemd",
+  "version": "1.0.0",
+  "dependencies": {
+    "sass": "^1.43.4",
+    "json-server": "^1.0.0-alpha.23"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ashrafmo-1/sassMixins"
+  },
+  "license": "MIT",
+  "keywords": [
+    "sass",
+    "css",
+    "mixins",
+    "web development"
+  ],
+  "homepage": "https://github.com/yourusername/mixins",
+  "bugs": {
+    "url": "https://github.com/yourusername/mixins/issues"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
