@@ -1,5 +1,13 @@
-//* git all mixins here *//
+//* ==== git all mixins here ==== *//
+
+
+@use "./layout/rest" as * ;
 @use "./flex_and_grid/flex" as *;
 @use "./flex_and_grid/grid" as *;
 
 //* test mixins here *//
+
+
+html {
+    @include reset_all_page;
+}
