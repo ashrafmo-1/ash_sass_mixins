@@ -3,3 +3,10 @@
     grid-template-columns: repeat(auto-fill, minmax($box_width, 1fr));
     gap: 40px;
 }
+
+/// Grid container mixin
+@mixin grid-container($template, $gap: 0) {
+    display: grid;
+    grid-template-columns: $template;
+    grid-gap: $gap;
+}

@@ -1,0 +1,27 @@
+/// colors, background colors and background images.
+
+// Gradient background mixin
+@mixin gradient-bg($start-color, $end-color) {
+    background: linear-gradient(to right, $start-color, $end-color);
+}
+
+// Box shadow mixin
+@mixin box-shadow($x, $y, $blur, $spread, $color) {
+    box-shadow: $x $y $blur $spread $color;
+}
+
+// Placeholder text styling mixin
+@mixin placeholder($color) {
+    &::-webkit-input-placeholder {
+      color: $color;
+    }
+    &::-moz-placeholder {
+      color: $color;
+    }
+    &:-ms-input-placeholder {
+      color: $color;
+    }
+    &:-moz-placeholder {
+      color: $color;
+    }
+}

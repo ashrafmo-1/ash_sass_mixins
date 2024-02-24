@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ashrafmo-1/sassMixins"
+    "url": "git+https://github.com/ashrafmo-1/sassMixins.git"
   },
   "license": "MIT",
   "keywords": [
@@ -18,11 +18,12 @@
     "mixins",
     "web development"
   ],
-  "homepage": "https://github.com/yourusername/mixins",
+  "homepage": "https://github.com/ashrafmo-1/sassMixins",
   "bugs": {
-    "url": "https://github.com/yourusername/mixins/issues"
+    "url": "https://ashraf-1.vercel.app/"
   },
   "main": "index.js",
+  "name": "scss_mixins",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   }

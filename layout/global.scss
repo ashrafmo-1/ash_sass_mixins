@@ -1,0 +1,25 @@
+@mixin z-index($index) {
+    z-index: $index;
+}
+// Rotate mixin
+@mixin rotate($deg) {
+    transform: rotate($deg);
+}
+// Translate mixin
+@mixin translate($x, $y) {
+    transform: translate($x, $y);
+}
+// Scale mixin
+@mixin scale($factor) {
+    transform: scale($factor);
+}
+// Animation mixin
+@mixin animation($name, $duration, $timing, $delay, $iteration) {
+    animation: $name $duration $timing $delay $iteration;
+}
+// Gradient text mixin
+@mixin gradient-text($start-color, $end-color) {
+    background: linear-gradient(to right, $start-color, $end-color);
+    -webkit-background-clip: text;
+    color: transparent;
+}
