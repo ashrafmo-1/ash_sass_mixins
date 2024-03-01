@@ -1,5 +1,5 @@
 {
-  "project_name": "mixins",
+  "project_name": "sass_mixins",
   "description": "Sass Mixins To Make The CSS Easier",
   "author": "ashraf mohaemd",
   "version": "1.0.0",
@@ -23,7 +23,7 @@
     "url": "https://ashraf-1.vercel.app/"
   },
   "main": "index.js",
-  "name": "scss_mixins",
+  "name": "ash_sass_mixins",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   }
