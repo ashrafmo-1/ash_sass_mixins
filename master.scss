@@ -11,3 +11,10 @@
 html {
     @include reset_all_page;
 }
+
+.links {
+    @include flex-container(row, nowrap, flex-start, stretch);
+    @include reset_all_page();
+    gap: 10px;
+    @include list-style-reset;
+}

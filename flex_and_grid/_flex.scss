@@ -2,7 +2,7 @@
 
 @mixin flex-content($position) {
     display: flex;
-    justify-content: $position;
+    justify-content: space-between;
     align-items: center;
 }
 
