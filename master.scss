@@ -1,20 +1,18 @@
-//* ==== git all mixins here ==== *//
+//*! ==== git all mixins here ==== for testing ==== *//
 
+@use "./src/rest.scss" as *;
+@use "./src/flex.scss" as *;
+@use "./src/grid.scss" as *;
 
-@use "./layout/rest" as * ;
-@use "./flex_and_grid/flex" as *;
-@use "./flex_and_grid/grid" as *;
-
-//* test mixins here *//
-
-
-html {
-    @include reset_all_page;
+.app {
+  @include reset_all_page;
+  @include reser_heading_spaces;
+  @include containerApp(80%);
 }
 
 .links {
-    @include flex-container(row, nowrap, flex-start, stretch);
-    @include reset_all_page();
-    gap: 10px;
-    @include list-style-reset;
+  @include flex-container(row, nowrap, space-around);
+  gap: 10px;
+  @include list-style-reset;
+  margin-bottom: 50px !important;
 }

@@ -1,20 +1,14 @@
 <h1 text="center"> scss mixin </h1>
-<p>flex mixins</p>
-
+<p>to use ash_sass_mixins</p>
 ```sh
-    npm i ash_sass_mixins
+npm i ash_sass_mixins
 ```
 
-# you have sass and grid controlling mixins classes
-
-# can you save alot of lines
-
-# resit page spaces
-
-```css
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+### to import flex mixins styles for example
+```scss
+@use '../node_modules/ash_sass_mixins/src/flex' as *;
 ```
 
-# make by ashraf mohamed
+## you have sass and grid controlling mixins classes;
+## can you save alot of lines;
+## resit page spacess;

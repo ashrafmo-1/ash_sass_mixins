@@ -9,7 +9,7 @@
 @mixin translate($x, $y) {
     transform: translate($x, $y);
 }
-// Scale mixin
+// Scale mixin;
 @mixin scale($factor) {
     transform: scale($factor);
 }

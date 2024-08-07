@@ -1,12 +1,11 @@
 /// documentation typing here
-
 @mixin flex-content($position) {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-@mixin width-center($widht) {
+@mixin containerApp($widht: 100%) {
     width: $widht;
     margin: auto !important;
 }
@@ -17,7 +16,7 @@
 }
 
 // Flex container mixin
-@mixin flex-container($direction: row, $wrap: nowrap, $justify: flex-start, $align: stretch) {
+@mixin flex-container($direction: row, $wrap: nowrap, $justify: flex-start, $align: center) {
     display: flex;
     flex-direction: $direction;
     flex-wrap: $wrap;
