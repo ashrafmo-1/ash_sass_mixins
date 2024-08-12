@@ -1,7 +1,7 @@
 {
   "project_name": "sass_mixins",
   "description": "Sass Mixins To Make The CSS Easier",
-  "author": "ashraf mohaemd",
+  "author": "ashraf mohamed",
   "version": "1.0.3",
   "dependencies": {
     "sass": "^1.43.4",
@@ -13,8 +13,9 @@
   },
   "license": "MIT",
   "keywords": [
-    "sass",
     "css",
+    "sass",
+    "styles",
     "mixins",
     "web development"
   ],
