@@ -14,6 +14,26 @@ To Import Flex Mixins Styles For Example;
 <p>Can You Save A Lot Of Lines</p>
 <p>Reset Page Spaces</p>
 
+## Responsive Utilities
+
+### 1. Responsive Padding
+
+```scss
+// SCSS
+@include responsive-padding(10px, 20px, 30px, 40px, 50px);
+
+### 2. Responsive margin
+@include responsive-margin(5px, 10px, 15px, 20px, 25px);
+
+
+### 3. Responsive Flex Direction
+@include responsive-flex-direction(row, column, row-reverse, column-reverse, row);
+
+### 3. Responsive Flex Container
+@include responsive-flex-container(row, center, center, 10px, column, space-between, center, 20px);
+```
+
+
 
 ## License
 
