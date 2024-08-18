@@ -1,0 +1,252 @@
+// Default breakpoints
+/// @param {map} $breakpoints - A map of breakpoints with their corresponding pixel values
+$breakpoints: (
+  "xs": 480px,
+  "sm": 768px,
+  "md": 1024px,
+  "lg": 1200px,
+  "xl": 1440px,
+);
+
+// Mixin for media queries
+/// @param {string} $breakpoint - The breakpoint to apply the media query for
+/// @param {block} $content - The styles to apply within the media query
+@mixin respond-to($breakpoint) {
+  @media (min-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+// Responsive padding
+/// @param {length} $xs - Padding for the xs breakpoint
+/// @param {length|null} $sm - Padding for the sm breakpoint (optional)
+/// @param {length|null} $md - Padding for the md breakpoint (optional)
+/// @param {length|null} $lg - Padding for the lg breakpoint (optional)
+/// @param {length|null} $xl - Padding for the xl breakpoint (optional)
+@mixin responsive-padding($xs: 0, $sm: null, $md: null, $lg: null, $xl: null) {
+  padding: $xs;
+
+  @if $sm {
+    @include respond-to(sm) {
+      padding: $sm;
+    }
+  }
+
+  @if $md {
+    @include respond-to(md) {
+      padding: $md;
+    }
+  }
+
+  @if $lg {
+    @include respond-to(lg) {
+      padding: $lg;
+    }
+  }
+
+  @if $xl {
+    @include respond-to(xl) {
+      padding: $xl;
+    }
+  }
+}
+
+// Responsive margin
+/// @param {length} $xs - Margin for the xs breakpoint
+/// @param {length|null} $sm - Margin for the sm breakpoint (optional)
+/// @param {length|null} $md - Margin for the md breakpoint (optional)
+/// @param {length|null} $lg - Margin for the lg breakpoint (optional)
+/// @param {length|null} $xl - Margin for the xl breakpoint (optional)
+@mixin responsive-margin($xs: 0, $sm: null, $md: null, $lg: null, $xl: null) {
+  margin: $xs;
+
+  @if $sm {
+    @include respond-to(sm) {
+      margin: $sm;
+    }
+  }
+
+  @if $md {
+    @include respond-to(md) {
+      margin: $md;
+    }
+  }
+
+  @if $lg {
+    @include respond-to(lg) {
+      margin: $lg;
+    }
+  }
+
+  @if $xl {
+    @include respond-to(xl) {
+      margin: $xl;
+    }
+  }
+}
+
+// Responsive flex direction
+/// @param {string} $xs - Flex direction for the xs breakpoint
+/// @param {string|null} $sm - Flex direction for the sm breakpoint (optional)
+/// @param {string|null} $md - Flex direction for the md breakpoint (optional)
+/// @param {string|null} $lg - Flex direction for the lg breakpoint (optional)
+/// @param {string|null} $xl - Flex direction for the xl breakpoint (optional)
+@mixin responsive-flex-direction(
+  $xs: row,
+  $sm: null,
+  $md: null,
+  $lg: null,
+  $xl: null
+) {
+  flex-direction: $xs;
+
+  @if $sm {
+    @include respond-to(sm) {
+      flex-direction: $sm;
+    }
+  }
+
+  @if $md {
+    @include respond-to(md) {
+      flex-direction: $md;
+    }
+  }
+
+  @if $lg {
+    @include respond-to(lg) {
+      flex-direction: $lg;
+    }
+  }
+
+  @if $xl {
+    @include respond-to(xl) {
+      flex-direction: $xl;
+    }
+  }
+}
+
+// Responsive font size
+/// @param {length} $xs - Font size for the xs breakpoint
+/// @param {length|null} $sm - Font size for the sm breakpoint (optional)
+/// @param {length|null} $md - Font size for the md breakpoint (optional)
+/// @param {length|null} $lg - Font size for the lg breakpoint (optional)
+/// @param {length|null} $xl - Font size for the xl breakpoint (optional)
+@mixin responsive-font-size(
+  $xs: 1rem,
+  $sm: null,
+  $md: null,
+  $lg: null,
+  $xl: null
+) {
+  font-size: $xs;
+
+  @if $sm {
+    @include respond-to(sm) {
+      font-size: $sm;
+    }
+  }
+
+  @if $md {
+    @include respond-to(md) {
+      font-size: $md;
+    }
+  }
+
+  @if $lg {
+    @include respond-to(lg) {
+      font-size: $lg;
+    }
+  }
+
+  @if $xl {
+    @include respond-to(xl) {
+      font-size: $xl;
+    }
+  }
+}
+
+// Responsive flex container with different settings for each breakpoint
+/// @param {string} $direction-xs - Flex direction for the xs breakpoint
+/// @param {string} $justify-xs - Justify content for the xs breakpoint
+/// @param {string} $align-xs - Align items for the xs breakpoint
+/// @param {length} $gap-xs - Gap for the xs breakpoint
+/// @param {string|null} $direction-sm - Flex direction for the sm breakpoint (optional)
+/// @param {string|null} $justify-sm - Justify content for the sm breakpoint (optional)
+/// @param {string|null} $align-sm - Align items for the sm breakpoint (optional)
+/// @param {length|null} $gap-sm - Gap for the sm breakpoint (optional)
+/// @param {string|null} $direction-md - Flex direction for the md breakpoint (optional)
+/// @param {string|null} $justify-md - Justify content for the md breakpoint (optional)
+/// @param {string|null} $align-md - Align items for the md breakpoint (optional)
+/// @param {length|null} $gap-md - Gap for the md breakpoint (optional)
+/// @param {string|null} $direction-lg - Flex direction for the lg breakpoint (optional)
+/// @param {string|null} $justify-lg - Justify content for the lg breakpoint (optional)
+/// @param {string|null} $align-lg - Align items for the lg breakpoint (optional)
+/// @param {length|null} $gap-lg - Gap for the lg breakpoint (optional)
+/// @param {string|null} $direction-xl - Flex direction for the xl breakpoint (optional)
+/// @param {string|null} $justify-xl - Justify content for the xl breakpoint (optional)
+/// @param {string|null} $align-xl - Align items for the xl breakpoint (optional)
+/// @param {length|null} $gap-xl - Gap for the xl breakpoint (optional)
+@mixin responsive-flex-container(
+  $direction-xs: row,
+  $justify-xs: flex-start,
+  $align-xs: stretch,
+  $gap-xs: 0,
+  $direction-sm: null,
+  $justify-sm: null,
+  $align-sm: null,
+  $gap-sm: null,
+  $direction-md: null,
+  $justify-md: null,
+  $align-md: null,
+  $gap-md: null,
+  $direction-lg: null,
+  $justify-lg: null,
+  $align-lg: null,
+  $gap-lg: null,
+  $direction-xl: null,
+  $justify-xl: null,
+  $align-xl: null,
+  $gap-xl: null
+) {
+  display: flex;
+  flex-direction: $direction-xs;
+  justify-content: $justify-xs;
+  align-items: $align-xs;
+  gap: $gap-xs;
+
+  @if $direction-sm {
+    @include respond-to(sm) {
+      flex-direction: $direction-sm;
+      justify-content: $justify-sm;
+      align-items: $align-sm;
+      gap: $gap-sm;
+    }
+  }
+
+  @if $direction-md {
+    @include respond-to(md) {
+      flex-direction: $direction-md;
+      justify-content: $justify-md;
+      align-items: $align-md;
+      gap: $gap-md;
+    }
+  }
+
+  @if $direction-lg {
+    @include respond-to(lg) {
+      flex-direction: $direction-lg;
+      justify-content: $justify-lg;
+      align-items: $align-lg;
+      gap: $gap-lg;
+    }
+  }
+
+  @if $direction-xl {
+    @include respond-to(xl) {
+      flex-direction: $direction-xl;
+      justify-content: $justify-xl;
+      align-items: $align-xl;
+      gap: $gap-xl;
+    }
+  }
+}

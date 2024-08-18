@@ -31,3 +31,8 @@
     padding: 0;
   }
 }
+
+@mixin link() {
+  text-decoration: none;
+  color: teal;
+}

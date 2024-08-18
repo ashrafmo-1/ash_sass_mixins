@@ -1,0 +1,159 @@
+/// documentation typing here
+@mixin flex-content($position) {
+  display: flex;
+  justify-content: $position;
+  align-items: center;
+}
+
+@mixin flex-and-gap($gap: 0) {
+  display: flex;
+  gap: $gap;
+}
+
+@mixin flex-direction($direction) {
+  display: flex;
+  flex-direction: $direction;
+}
+
+// Flex container mixin
+@mixin flex-container(
+  $direction: row,
+  $wrap: nowrap,
+  $justify: flex-start,
+  $align: center,
+  $gap: 0
+) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+@mixin flex-item($flex: 1, $order: 0) {
+  flex: $flex;
+  order: $order;
+}
+
+@mixin flex_wrap($value: nowrap) {
+  -webkit-flex-wrap: $value;
+  -moz-flex-wrap: $value;
+  @if $value == nowrap {
+    -ms-flex-wrap: none;
+  } @else {
+    -ms-flex-wrap: $value;
+  }
+  flex-wrap: $value;
+}
+
+@mixin containerApp($widht: 100%) {
+  width: $widht;
+  margin: auto !important;
+}
+
+//? start grid =======================================
+@mixin Grid-Boxes($box_width) {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax($box_width, 1fr));
+  gap: 40px;
+}
+
+/// @param parameters required {$template} {size gap}
+/// Grid container mixin
+@mixin grid-container($template: 300px, $gap: 0) {
+  display: grid;
+  grid-template-columns: $template; /// Flex content alignment mixin
+  /// @param {string} $position - Position for justify-content (e.g., center, flex-start)
+  @mixin flex-content($position) {
+    display: flex;
+    justify-content: $position;
+    align-items: center;
+  }
+
+  /// Flex container with gap
+  /// @param {string|number} $gap - Gap between flex items (default: 0)
+  @mixin flex-and-gap($gap: 0) {
+    display: flex;
+    gap: $gap;
+  }
+
+  /// Flex direction mixin
+  /// @param {string} $direction - Direction of the flex items (e.g., row, column)
+  @mixin flex-direction($direction) {
+    display: flex;
+    flex-direction: $direction;
+  }
+
+  /// Comprehensive flex container mixin
+  /// @param {string} $direction - Flex direction (default: row)
+  /// @param {string} $wrap - Flex wrap (default: nowrap)
+  /// @param {string} $justify - Justify content (default: flex-start)
+  /// @param {string} $align - Align items (default: center)
+  /// @param {string|number} $gap - Gap between items (default: 0)
+  @mixin flex-container(
+    $direction: row,
+    $wrap: nowrap,
+    $justify: flex-start,
+    $align: center,
+    $gap: 0
+  ) {
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+  }
+
+  /// Flex item properties mixin
+  /// @param {number} $flex - Flex grow/shrink value (default: 1)
+  /// @param {number} $order - Order of the flex item (default: 0)
+  @mixin flex-item($flex: 1, $order: 0) {
+    flex: $flex;
+    order: $order;
+  }
+
+  /// Flex wrap mixin with browser compatibility
+  /// @param {string} $value - Value for flex-wrap (e.g., nowrap, wrap)
+  @mixin flex_wrap($value: nowrap) {
+    -webkit-flex-wrap: $value;
+    -moz-flex-wrap: $value;
+    @if $value == nowrap {
+      -ms-flex-wrap: none;
+    } @else {
+      -ms-flex-wrap: $value;
+    }
+    flex-wrap: $value;
+  }
+
+  /// Container with auto margin and adjustable width
+  /// @param {string|number} $width - Width of the container (default: 100%)
+  @mixin containerApp($width: 100%) {
+    width: $width;
+    margin: auto !important;
+  }
+
+  // =======================================
+  // Grid Mixins
+  // =======================================
+
+  /// Grid boxes layout with auto-fill
+  /// @param {string|number} $box_width - Minimum width of the grid box
+  @mixin Grid-Boxes($box_width) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax($box_width, 1fr));
+    gap: 40px;
+  }
+
+  /// Grid container mixin
+  /// @param {string} $template - Grid template columns (default: 300px)
+  /// @param {string|number} $gap - Gap between grid items (default: 0)
+  @mixin grid-container($template: 300px, $gap: 0) {
+    display: grid;
+    grid-template-columns: $template;
+    grid-gap: $gap;
+  }
+
+  grid-gap: $gap;
+}

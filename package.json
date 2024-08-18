@@ -2,7 +2,7 @@
   "project_name": "sass_mixins",
   "description": "Sass Mixins To Make The CSS Easier",
   "author": "ashraf mohamed",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "dependencies": {
     "sass": "^1.43.4",
     "json-server": "^1.0.0-alpha.23"
