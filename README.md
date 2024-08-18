@@ -21,15 +21,20 @@ To Import Flex Mixins Styles For Example;
 ```scss
 // SCSS
 @include responsive-padding(10px, 20px, 30px, 40px, 50px);
+```
 
 ### 2. Responsive margin
+```scss
 @include responsive-margin(5px, 10px, 15px, 20px, 25px);
-
+```
 
 ### 3. Responsive Flex Direction
+```scss
 @include responsive-flex-direction(row, column, row-reverse, column-reverse, row);
+```
 
 ### 3. Responsive Flex Container
+```scss
 @include responsive-flex-container(row, center, center, 10px, column, space-between, center, 20px);
 ```
 
